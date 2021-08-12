@@ -1,2 +1,0 @@
-import Reac from 'react';
-

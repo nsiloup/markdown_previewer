@@ -1,11 +1,12 @@
+import MarkdownPrev from './Components/MarkdownPrev'
 
 let App =()=>{
   return (
-    <Editor />
-
+    <MarkdownPrev />
   );
 };
 
+export default App;
 
 
 
