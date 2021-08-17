@@ -1,0 +1,33 @@
+body, #root {
+    overflow: hidden;
+    margin : 0 ;
+    padding :0 ;
+
+};
+*{
+    box-sizing: border-box;        
+
+}
+.app-container {
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    header {
+        grid-area: 1/1/2/2;
+        width: auto ;
+        height: 10%;
+    };
+    .mark-container {
+        grid-area: 2/1/3/2;
+        /*width: 100vw;
+        height: auto;*/
+        width: auto;
+        height: 90%;
+        overflow: hidden;
+    };
+};
+
+@import "../Parts/marContaier/markContainer.scss";
+@import "../Parts/Header/header.scss";

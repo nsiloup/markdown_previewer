@@ -1,4 +1,5 @@
 import MarkdownPrev from './Components/MarkdownPrev'
+import "./Styles/MainStyles/App.css"
 
 let App =()=>{
   return (

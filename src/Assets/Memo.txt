@@ -1,0 +1,14 @@
+-------------------------------------------------------------
+Stacks used :
+
+    interact.js : for resizing element freely
+        https://interactjs.io/
+        https://www.npmjs.com/package/interactjs/v/1.10.11 
+
+----------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Make a div fill the height of the remaining screen space
+https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space
+----------------------------------------------------------------------
