@@ -11,6 +11,8 @@
   border-top: none;
   overflow: auto;
   outline: none;
+  -ms-touch-action: none;
+      touch-action: none;
   /*-webkit-box-shadow: none;
         -moz-box-shadow: none;*/
   -webkit-box-shadow: none;
@@ -20,8 +22,6 @@
 
 .mark-container .edit, .mark-container .prev {
   overflow: auto;
-  -ms-touch-action: none;
-      touch-action: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -34,6 +34,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
+  border-right: 20px solid #fc5204;
   /*flex-grow : 1;
         flex-shrink: 1;*/
 }
