@@ -1,11 +1,9 @@
 import React from 'react';
-//import ReactMarkdown from 'react-markdown';
-//import  gfm  from 'remark-gfm';
 import marked from 'marked';
 import Prism from "prismjs";
 import DOMPurify from 'dompurify';
 import interact from 'interactjs';
-import { resizeFuncObj } from '../Helpers/returnStufs';
+import { resizeFuncObj, /*getSize*/ } from '../Helpers/returnStufs';
 import persePic from "../Assets/perse2.png"
 
 class MarkdownPrev extends React.Component {
@@ -15,7 +13,6 @@ class MarkdownPrev extends React.Component {
             input : edInput
         };
         this.handleChange = this.handleChange.bind(this);
-        //this.getMrkDwn = this.getMrkDwn.bind(this);
         this.clearEd = this.clearEd.bind(this);
     };
     handleChange(event){
@@ -55,26 +52,40 @@ class MarkdownPrev extends React.Component {
         //INTERACTJS PART START
 
             //RESING THE PREVIEW
-        interact('.prev') 
-        .resizable(resizeFuncObj())
+        //interact('.prev').resizable(resizeFuncObj());
 
             //RESIING THE EDITOR
-        interact('.edit') 
-        .resizable(resizeFuncObj())
+        interact('.edit').resizable(resizeFuncObj())
         
         //INTERACTJS PART ENDS
-
+        let editorRect;
+        let getRect =()=> {
+            let timer = setTimeout(() =>{
+                editorRect = document.querySelector(".edit").getBoundingClientRect();
+                console.log(editorRect)
+            }, 500)
+            return () =>{
+                clearTimeout(timer)
+            }
+        }; getRect()
+        //console.log(getRect())
+        //EXPERIMENTAL BELLOW
+        
+        //EXPERIMENTAL ABOVE
 
         return(
             <div className="app-container">
                 <header>
-                    <button onClick={this.clearEd}>Clear Editor</button>
-                    <img src={persePic} alt="Perseverance Nsilou" className="my-pic"/>
+                    <div className="left-side">
+                        <button onClick={this.clearEd}>Clear Editor</button>
+                    </div>
+                    <div className="right-side">
+                        <img src={persePic} alt="Perseverance Nsilou" className="my-pic"/>
+                    </div>
                 </header>
                 <div className="mark-container">
                     <textarea id="editor" onChange={this.handleChange} value={input} className="edit"/>
-                    {/*<ReactMarkdown remarkPlugins={[gfm]} children={input} id="preview"/>*/}
-                    <div dangerouslySetInnerHTML = {getMrkDwn(input)} id="preview" className="prev"/>
+                    <div dangerouslySetInnerHTML = {getMrkDwn(input)} id="preview" className="prev" style={{}} />
                 </div>
             </div>
         )

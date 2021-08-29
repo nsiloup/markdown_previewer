@@ -13,18 +13,24 @@ body, #root {
     height:100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 1fr;
+    align-items: stretch;
+    overflow: hidden;
+    background: #4b42ff;
+
     header {
         grid-area: 1/1/2/2;
-        width: auto ;
-        height: 10%;
+        width: 100% ;
+        height: calc(25px + 3.2vw);
+        //max-height: 10vh;
+        overflow: hidden;
     };
     .mark-container {
         grid-area: 2/1/3/2;
         /*width: 100vw;
         height: auto;*/
         width: auto;
-        height: 90%;
+        height: 90vh;
         overflow: hidden;
     };
 };

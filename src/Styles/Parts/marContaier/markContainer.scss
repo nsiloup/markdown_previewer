@@ -1,10 +1,12 @@
 .mark-container {
+    
     display: grid;
-    //width : 100%;
-    grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
+    
+    //display: flex;
     textarea {
-        border: none;
+        border-top: none;
         overflow: auto;
         outline: none;
     
@@ -13,18 +15,31 @@
         box-shadow: none;
     
         resize: none; 
+
     }
     .edit, .prev {
         overflow: auto;
-        border: 1%, black;
-
+        //border: 1%, black;
         touch-action: none;
         box-sizing: border-box;        
     };
     .edit{
+        background: #1e1f26;
+        color: white;
         grid-area: 1/1/2/2;
+        
+        /*flex-grow : 1;
+        flex-shrink: 1;*/
+
+
+        //width:max-content;
     };
     .prev{
+        background: #fff;
         grid-area: 1/2/2/3;
+        
+        /*flex-grow : 1;
+        flex-shrink: 1;*/
+        
     };
 };

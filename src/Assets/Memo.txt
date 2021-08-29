@@ -5,10 +5,17 @@ Stacks used :
         https://interactjs.io/
         https://www.npmjs.com/package/interactjs/v/1.10.11 
 
-----------------------------------------------------------------
+    -------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
 
 
 ---------------------------------------------------------------------
 Make a div fill the height of the remaining screen space
 https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space
 ----------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------
+Get the div heigt/width with plain javaScript
+    https://stackoverflow.com/questions/15615552/get-div-height-with-plain-javascript?rq=1
+--------------------------------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 export let resizeFuncObj = () =>{
 
     let obj = {
-        edges: { top: true, left: true, bottom: true, right: true },
+        edges: { top: true, left: false, bottom: true, right: true },
         listeners: {
             move: function (event) {
             let { x, y } = event.target.dataset
@@ -23,4 +23,12 @@ export let resizeFuncObj = () =>{
         
 };
 
+
+export let getSize = (element)=>{
+    let obj = {
+        height : document.getElementById(element).offsetHeight,
+        width : document.getElementById(element).offsetWidth
+    };
+    return obj
+}
 

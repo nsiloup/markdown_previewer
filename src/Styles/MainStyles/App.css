@@ -16,8 +16,13 @@ body, #root {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  overflow: hidden;
+  background: #4b42ff;
 }
 
 .app-container header {
@@ -26,8 +31,9 @@ body, #root {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
-  width: auto;
-  height: 10%;
+  width: 100%;
+  height: calc(25px + 3.2vw);
+  overflow: hidden;
 }
 
 .app-container .mark-container {
@@ -39,21 +45,21 @@ body, #root {
   /*width: 100vw;
         height: auto;*/
   width: auto;
-  height: 90%;
+  height: 90vh;
   overflow: hidden;
 }
 
 .mark-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(45vw, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
+  -ms-grid-columns: (minmax(auto, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
   -ms-grid-rows: (minmax(50%, 1fr))[auto-fit];
       grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
 }
 
 .mark-container textarea {
-  border: none;
+  border-top: none;
   overflow: auto;
   outline: none;
   /*-webkit-box-shadow: none;
@@ -61,11 +67,11 @@ body, #root {
   -webkit-box-shadow: none;
           box-shadow: none;
   resize: none;
+  border-right: 50px #2c2cbb;
 }
 
 .mark-container .edit, .mark-container .prev {
   overflow: auto;
-  border: 1%, black;
   -ms-touch-action: none;
       touch-action: none;
   -webkit-box-sizing: border-box;
@@ -73,19 +79,26 @@ body, #root {
 }
 
 .mark-container .edit {
+  background: #1e1f26;
+  color: white;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
+  /*flex-grow : 1;
+        flex-shrink: 1;*/
 }
 
 .mark-container .prev {
+  background: #fff;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 1/2/2/3;
+  /*flex-grow : 1;
+        flex-shrink: 1;*/
 }
 
 header {
@@ -95,5 +108,20 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #0239df;
+}
+
+header .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+}
+
+header .right-side .my-pic {
+  max-height: 100%;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,4 +1,14 @@
 header {
     display: flex;
     justify-content: space-between;
+    background: #0239df;
+    .right-side{
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        .my-pic{
+            max-height: 100%;
+        };
+    };
+
 };

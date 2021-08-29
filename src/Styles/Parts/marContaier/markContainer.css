@@ -1,14 +1,14 @@
 .mark-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(45vw, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
+  -ms-grid-columns: (minmax(auto, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
   -ms-grid-rows: (minmax(50%, 1fr))[auto-fit];
       grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
 }
 
 .mark-container textarea {
-  border: none;
+  border-top: none;
   overflow: auto;
   outline: none;
   /*-webkit-box-shadow: none;
@@ -20,7 +20,6 @@
 
 .mark-container .edit, .mark-container .prev {
   overflow: auto;
-  border: 1%, black;
   -ms-touch-action: none;
       touch-action: none;
   -webkit-box-sizing: border-box;
@@ -28,18 +27,25 @@
 }
 
 .mark-container .edit {
+  background: #1e1f26;
+  color: white;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
+  /*flex-grow : 1;
+        flex-shrink: 1;*/
 }
 
 .mark-container .prev {
+  background: #fff;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 1/2/2/3;
+  /*flex-grow : 1;
+        flex-shrink: 1;*/
 }
 /*# sourceMappingURL=markContainer.css.map */
