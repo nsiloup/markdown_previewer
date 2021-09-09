@@ -32,3 +32,18 @@ export let getSize = (element)=>{
     return obj
 }
 
+
+export let obsFunction =(elem)=>{
+    if('ResizeObserver' in window) {
+
+        const callback = (entries) =>{
+            console.log(entries[0].contentRect)
+        };
+        
+        const observer = new ResizeObserver(callback);
+
+        const target = document.querySelector(elem);
+        observer.observe(target);
+    };
+    //return watch;
+};

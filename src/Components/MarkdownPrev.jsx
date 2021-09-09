@@ -3,7 +3,7 @@ import marked from 'marked';
 import Prism from "prismjs";
 import DOMPurify from 'dompurify';
 import interact from 'interactjs';
-import { resizeFuncObj, /*getSize*/ } from '../Helpers/returnStufs';
+import { resizeFuncObj, obsFunction/*getSize*/ } from '../Helpers/returnStufs';
 import persePic from "../Assets/perse2.png"
 
 class MarkdownPrev extends React.Component {
@@ -58,21 +58,25 @@ class MarkdownPrev extends React.Component {
         interact('.edit').resizable(resizeFuncObj())
         
         //INTERACTJS PART ENDS
-        let editorRect;
+        
+        //let editorRect;
+
         let getRect =()=> {
             let timer = setTimeout(() =>{
-                editorRect = document.querySelector(".edit").getBoundingClientRect();
-                console.log(editorRect)
+                /*editorRect = document.querySelector(".edit").getBoundingClientRect();
+                console.log(editorRect)*/
+                obsFunction('.edit')
+                
             }, 500)
             return () =>{
                 clearTimeout(timer)
             }
-        }; getRect()
+        }; getRect() 
+        
         //console.log(getRect())
         //EXPERIMENTAL BELLOW
-        
         //EXPERIMENTAL ABOVE
-
+        //obsFunction('.edit')
         return(
             <div className="app-container">
                 <header>

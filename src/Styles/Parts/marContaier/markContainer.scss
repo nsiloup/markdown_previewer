@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
+    background-color: red;
     
     //display: flex;
     textarea {
@@ -26,7 +27,7 @@
         background: #1e1f26;
         color: white;
         grid-area: 1/1/2/2;
-        border-right: 20px solid rgb(252, 82, 4);
+        border-right: 20px solid rgb(226, 101, 43);
         /*flex-grow : 1;
         flex-shrink: 1;*/
 

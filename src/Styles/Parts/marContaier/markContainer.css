@@ -5,6 +5,7 @@
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
   -ms-grid-rows: (minmax(50%, 1fr))[auto-fit];
       grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
+  background-color: red;
 }
 
 .mark-container textarea {
@@ -34,7 +35,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
-  border-right: 20px solid #fc5204;
+  border-right: 20px solid #e2652b;
   /*flex-grow : 1;
         flex-shrink: 1;*/
 }
