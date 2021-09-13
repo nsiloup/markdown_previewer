@@ -1,7 +1,8 @@
-export let resizeFuncObj = () =>{
+export let resizeFuncObj = (corners) =>{
 
     let obj = {
-        edges: { top: true, left: false, bottom: true, right: true },
+        //edges: { top: true, left: false, bottom: true, right: true },
+        edges : corners,
         listeners: {
             move: function (event) {
             let { x, y } = event.target.dataset

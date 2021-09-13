@@ -55,8 +55,13 @@ class MarkdownPrev extends React.Component {
         //interact('.prev').resizable(resizeFuncObj());
 
             //RESIING THE EDITOR
-        interact('.edit').resizable(resizeFuncObj())
+        let editorResizeCorners =  { top: true, left: false, bottom: true, right: true };
+        interact('.edit').resizable(resizeFuncObj(editorResizeCorners))
         
+            //RESISING THE PREVIEW
+        let previewResizeCorners = { top: false, left: false, bottom: false, right: false };
+        interact('.prev').resizable(resizeFuncObj(previewResizeCorners))
+
         //INTERACTJS PART ENDS
         
         //let editorRect;

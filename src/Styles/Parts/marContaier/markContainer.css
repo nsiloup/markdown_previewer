@@ -1,33 +1,19 @@
-.mark-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(auto, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
-  -ms-grid-rows: (minmax(50%, 1fr))[auto-fit];
-      grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
-  background-color: red;
-}
-
-.mark-container textarea {
-  border-top: none;
-  overflow: auto;
-  outline: none;
-  -ms-touch-action: none;
-      touch-action: none;
-  /*-webkit-box-shadow: none;
-        -moz-box-shadow: none;*/
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  resize: none;
-}
-
-.mark-container .edit, .mark-container .prev {
+.edit, .prev {
   overflow: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.mark-container .edit {
+.edit {
+  border-top: none;
+  outline: none;
+  -ms-touch-action: none;
+      touch-action: none;
+  /*-webkit-box-shadow: none;
+    -moz-box-shadow: none;*/
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  resize: none;
   background: #1e1f26;
   color: white;
   -ms-grid-row: 1;
@@ -37,17 +23,21 @@
   grid-area: 1/1/2/2;
   border-right: 20px solid #e2652b;
   /*flex-grow : 1;
-        flex-shrink: 1;*/
+    flex-shrink: 1;*/
 }
 
-.mark-container .prev {
+.prev {
   background: #fff;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 1/2/2/3;
+  display: inline;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   /*flex-grow : 1;
-        flex-shrink: 1;*/
+    flex-shrink: 1;*/
 }
 /*# sourceMappingURL=markContainer.css.map */
