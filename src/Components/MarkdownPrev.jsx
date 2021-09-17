@@ -70,7 +70,7 @@ class MarkdownPrev extends React.Component {
             let timer = setTimeout(() =>{
                 /*editorRect = document.querySelector(".edit").getBoundingClientRect();
                 console.log(editorRect)*/
-                obsFunction('.edit')
+                obsFunction('.edit', '.prev')
                 
             }, 500)
             return () =>{

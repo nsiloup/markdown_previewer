@@ -21,7 +21,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
-  border-right: 20px solid #e2652b;
+  border-right: 20px solid #2be2e2;
   /*flex-grow : 1;
     flex-shrink: 1;*/
 }
@@ -33,10 +33,6 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 1/2/2/3;
-  display: inline;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   /*flex-grow : 1;
     flex-shrink: 1;*/
 }

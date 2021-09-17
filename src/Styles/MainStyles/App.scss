@@ -37,9 +37,11 @@ body, #root {
         width : 100vw;
         overflow: hidden;
 
+        
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(auto, auto));
         grid-template-rows: repeat(auto-fit, minmax(50%, 1fr));
+        
     
     };
 };

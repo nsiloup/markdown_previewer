@@ -34,17 +34,46 @@ export let getSize = (element)=>{
 }
 
 
-export let obsFunction =(elem)=>{
+export let obsFunction =(edit, prev)=>{
+    let editor  = document.querySelector(edit);
+    let preview = document.querySelector(prev);
+    editor.style.width = "50vw";
+    //preview.style.width = "50vw";
+    console.log(preview)
+    //let preview = document.querySelector(prev);
+    //let editorRect = {};
     if('ResizeObserver' in window) {
 
+        /*
         const callback = (entries) =>{
             console.log(entries[0].contentRect)
         };
         
         const observer = new ResizeObserver(callback);
 
-        const target = document.querySelector(elem);
-        observer.observe(target);
+        const target = document.querySelector(element);
+        observer.observe(element);
+        */
+        let callback = (entries, observer) =>{
+            for (let entry of entries){
+                let rect = entry.contentRect;
+                //console.log("Entry is : ", rect);
+                let edSize = {
+                    width : rect.width,
+                    height : rect.height
+                };
+                console.log(edSize);
+                let edWidth = edSize.width;
+                let calc = `calc(100vw - ${edWidth}px)`
+                preview.style.setProperty('width', calc);
+
+                //editor.style.width = 
+            };
+        };
+        let ro = new ResizeObserver(callback);
+        ro.observe(editor);
     };
+    console.log(preview)
+    //console.log("edit is : ",editorRect)
     //return watch;
 };
