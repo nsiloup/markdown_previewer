@@ -67,13 +67,11 @@ export let obsFunction =(edit, prev)=>{
                 let calc = `calc(100vw - ${edWidth}px)`
                 preview.style.setProperty('width', calc);
 
-                //editor.style.width = 
             };
         };
         let ro = new ResizeObserver(callback);
         ro.observe(editor);
     };
+
     console.log(preview)
-    //console.log("edit is : ",editorRect)
-    //return watch;
 };
