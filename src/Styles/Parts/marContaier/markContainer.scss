@@ -5,6 +5,7 @@
     box-sizing: border-box;
 };
 .edit{
+    padding : 2%;
 
     border-top: none;
     //overflow: auto;
@@ -17,14 +18,31 @@
 
 
 
-    background: #1e1f26;
+    background: #2c303a;
     color: white;
     grid-area: 1/1/2/2;
-    border-right: 20px solid rgb(43, 226, 226);
+    border-right: 20px solid #010101;
 
 };
 .prev{
+    padding : 2%;
     background: #fff;
     grid-area: 1/2/2/3;
     
+    table{
+        background: rgb(54, 54, 54);
+
+        border : 4px solid rgb(39, 39, 39);
+        th {
+            background: rgb(6, 64, 82);
+            color : rgb(245, 244, 238);
+        };
+        tr{
+            background: rgb(226, 225, 225);
+        };
+    };
+    img {
+        max-width: 100%;
+    }
+
 };

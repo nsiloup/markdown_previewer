@@ -64,7 +64,8 @@ export let obsFunction =(edit, prev)=>{
                 };
                 console.log(edSize);
                 let edWidth = edSize.width;
-                let calc = `calc(100vw - ${edWidth}px)`
+                let editorBorder = `20px`;// the width of the border of the editor 
+                let calc = `calc(100vw - ${edWidth}px) + ${editorBorder}`
                 preview.style.setProperty('width', calc);
 
             };

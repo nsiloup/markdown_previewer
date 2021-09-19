@@ -5,7 +5,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #0239df;
+  background: #010101;
 }
 
 header .right-side {
@@ -19,6 +19,6 @@ header .right-side {
 }
 
 header .right-side .my-pic {
-  max-height: 100%;
+  max-width: 100%;
 }
 /*# sourceMappingURL=header.css.map */

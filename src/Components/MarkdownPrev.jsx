@@ -55,7 +55,7 @@ class MarkdownPrev extends React.Component {
         //interact('.prev').resizable(resizeFuncObj());
 
             //RESIING THE EDITOR
-        let editorResizeCorners =  { top: true, left: false, bottom: true, right: true };
+        let editorResizeCorners =  { top: false, left: false, bottom: false, right: true };
         interact('.edit').resizable(resizeFuncObj(editorResizeCorners))
         
             //RESISING THE PREVIEW
@@ -77,6 +77,7 @@ class MarkdownPrev extends React.Component {
                 clearTimeout(timer)
             }
         }; getRect() 
+        
         
         //console.log(getRect())
         //EXPERIMENTAL BELLOW
