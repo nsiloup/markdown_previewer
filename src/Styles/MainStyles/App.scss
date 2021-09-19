@@ -13,14 +13,14 @@ body, #root {
     height:100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(auto auto);
+    grid-template-rows: auto 1fr;
     align-items: stretch;
     overflow: hidden;
     background: #4b42ff;
 
     header {
         grid-area: 1/1/2/2;
-        width: 100vw ;
+        width: 100% ;
         height: calc(25px + 3.2vw);
         //max-height: 10vh;
         overflow: hidden;
@@ -30,6 +30,7 @@ body, #root {
         //display : flex;
         background-color: red;
 
+        //height: 90vh;
         width : 100vw;
         overflow: hidden;
 

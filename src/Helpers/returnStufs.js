@@ -57,19 +57,14 @@ export let obsFunction =(edit, prev)=>{
         */
         let callback = (entries, observer) =>{
             for (let entry of entries){
-                console.log("in ientries ",entries)
-                console.log(entry)
-                if("borderBoxSize" in entries[0]){// MAKING SURE THAT THE BROWSER supports the "borderBoxSize" method
-
+                if("borderBoxSize" in entries[0]){//method for  THE BROWSERS that supports the "borderBoxSize" 
+                    console.log("content is :", entry.contentRect,"\n", "borderSize is : " ,entry.borderBoxSize)
                     let rect = entry.borderBoxSize;
-                    //let rect = entry.borderBoxSize;
-    
-                    //console.log("Entry is : ", rect);
+                    console.log(rect[0])
                     let edSize = {
-                        width : rect.width,
-                        height : rect.height
+                        width : rect[0].inlineSize,
+                        height : rect[0].blockSize
                     };
-                    //console.log(edSize);
                     let edWidth = edSize.width;
                     let calc = `calc(100vw - ${edWidth}px)`
                     preview.style.setProperty('width', calc);
@@ -93,6 +88,4 @@ export let obsFunction =(edit, prev)=>{
         let ro = new ResizeObserver(callback);
         ro.observe(editor);
     };
-
-    //console.log(preview)
 };

@@ -16,8 +16,8 @@ body, #root {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(auto auto);
-      grid-template-rows: minmax(auto auto);
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -31,7 +31,7 @@ body, #root {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
-  width: 100vw;
+  width: 100%;
   height: calc(25px + 3.2vw);
   overflow: hidden;
 }
@@ -81,7 +81,7 @@ body, #root {
 }
 
 .prev {
-  padding: 0% 2%;
+  padding: 2%;
   background: #fff;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
