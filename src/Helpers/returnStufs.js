@@ -37,9 +37,10 @@ export let getSize = (element)=>{
 export let obsFunction =(edit, prev)=>{
     let editor  = document.querySelector(edit);
     let preview = document.querySelector(prev);
+    editor.style.setProperty('boxe-sizing', 'borderBox');
     editor.style.width = "50vw";
     //preview.style.width = "50vw";
-    console.log(preview)
+    //console.log(preview)
     //let preview = document.querySelector(prev);
     //let editorRect = {};
     if('ResizeObserver' in window) {
@@ -56,17 +57,36 @@ export let obsFunction =(edit, prev)=>{
         */
         let callback = (entries, observer) =>{
             for (let entry of entries){
-                let rect = entry.contentRect;
-                //console.log("Entry is : ", rect);
-                let edSize = {
-                    width : rect.width,
-                    height : rect.height
-                };
-                console.log(edSize);
-                let edWidth = edSize.width;
-                let editorBorder = `20px`;// the width of the border of the editor 
-                let calc = `calc(100vw - ${edWidth}px) + ${editorBorder}`
-                preview.style.setProperty('width', calc);
+                console.log("in ientries ",entries)
+                console.log(entry)
+                if("borderBoxSize" in entries[0]){// MAKING SURE THAT THE BROWSER supports the "borderBoxSize" method
+
+                    let rect = entry.borderBoxSize;
+                    //let rect = entry.borderBoxSize;
+    
+                    //console.log("Entry is : ", rect);
+                    let edSize = {
+                        width : rect.width,
+                        height : rect.height
+                    };
+                    //console.log(edSize);
+                    let edWidth = edSize.width;
+                    let calc = `calc(100vw - ${edWidth}px)`
+                    preview.style.setProperty('width', calc);
+                }else{// for the BROWSERS that don't support the "borderBoxSize" method, i had to includ the border manualy in the contentRect
+
+                    let rect = entry.contentRect;
+                    let edSize = {
+                        width : rect.width,
+                        height : rect.height
+                    };
+                    //console.log(edSize);
+                    let edWidth = edSize.width;
+                    let editorBorder = `20px`;// the width of the border of the editor, must be the same as the width defined in the CSS
+                    let calc = `calc(100vw - ${edWidth}px) + ${editorBorder}`
+                    preview.style.setProperty('width', calc);
+                        
+                }
 
             };
         };
@@ -74,5 +94,5 @@ export let obsFunction =(edit, prev)=>{
         ro.observe(editor);
     };
 
-    console.log(preview)
+    //console.log(preview)
 };
