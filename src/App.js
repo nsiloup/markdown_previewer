@@ -1,10 +1,20 @@
-import MarkdownPrev from './Components/MarkdownPrev'
+//import MarkdownPrev from './Components/MarkdownPrev'
 import "./Styles/MainStyles/App.css"
+import Container from "./ReactReduxBridge/MarkdownContatiner"
 
+/*
 let App =()=>{
   return (
     <MarkdownPrev />
   );
+};
+*/
+let App = () => {
+  return(
+    <div>
+      <Container />
+    </div>
+  )
 };
 
 export default App;

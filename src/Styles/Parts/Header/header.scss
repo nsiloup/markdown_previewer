@@ -1,14 +1,36 @@
 header {
-    display: flex;
-    justify-content: space-between;
+    display : grid;
+    grid-template-columns: auto auto;
     background: #010101;
+    .left-side{
+        width: 100%;
+        grid-area: 1/1/2/2;
+        display : flex;
+        align-items: center;
+        height: calc(25px + 3.2vw);
+        .buttons{
+            height: fit-content;
+            font-size: calc(1rem + 0.1vw);
+            margin: 0 0.5%;
+            padding: 1.5%;
+        };
+    };
     .right-side{
+        grid-area: 1/2/2/3;
         display: flex;
         justify-content: flex-end;
-        //background: burlywood;
-        width: 50%;
-        .my-pic{
-            max-width: 100%;
+        height: calc(25px + 3.2vw);
+
+        .img-container{
+            display: flex;
+            justify-content: flex-end;
+            //max-width: 100%;
+            .my-pic{
+                max-width: 100%;
+                max-height: 100%;
+
+            };
+
         };
     };
 
