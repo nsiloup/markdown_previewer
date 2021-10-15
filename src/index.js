@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import store from "./store"
 
 
-//ReactDOM.render(<App />, document.getElementById("root"))
 
 ReactDOM.render(
   <Provider store = {store}>

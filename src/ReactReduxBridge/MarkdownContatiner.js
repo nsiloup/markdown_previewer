@@ -4,19 +4,9 @@ import { expandPreview, expandEditor, splitView} from '../actionsNconstants/Cons
 
 
 
-/*export class  MarkdownBridge extends React.Component {
-    render(){
-        return (
-            <MarkdownPrev/>
-        )
-    }
-};*/
 
 let mapStateToProps = (state)=>{
     return {
-        /*editorWidth : state.changeLayoutReducer.edWidth,
-        previewWidth : state.changeLayoutReducer.prevWidth,
-        messageSystem : state.changeLayoutReducer.message*/
         layoutProps : state.changeLayoutReducer.layoutProps
     };
 };

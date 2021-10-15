@@ -10,8 +10,6 @@
   outline: none;
   -ms-touch-action: none;
       touch-action: none;
-  /*-webkit-box-shadow: none;
-    -moz-box-shadow: none;*/
   -webkit-box-shadow: none;
           box-shadow: none;
   resize: none;

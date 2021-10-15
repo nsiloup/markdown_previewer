@@ -1,6 +1,5 @@
 import { BOTH_VIEWS, FULL_EDTIOR, FULL_PREVIEW } from "../actionsNconstants/ConstantsActions";
 
-//let initState = splitView().playload;
 let obj = {layoutProps :{
     edCalc  :{
         edWidth : `50vw`,
@@ -21,34 +20,18 @@ let changeLayoutReducer = (state = initState, action) => {
             return {
                 ...state,
                 layoutProps : action.payload
-                /*layoutProps :{
-                    edWidth : action.payload.edWidth,
-                    prevWidth : action.payload.prevWidth,
-                    message : action.payload.message
-                }*/
             };
         case FULL_EDTIOR : 
         console.log(action.payload.message)
             return {
                 ...initState,
                 layoutProps : action.payload
-                /*
-                layoutProps : {
-                    edWidth : action.payload.edWidth,
-                    prevWidth : action.payload.prevWidth,
-                    message : action.payload.message
-                }*/
             };
         case BOTH_VIEWS : 
         console.log(action.payload.message)
             return {
                 ...initState,
                 layoutProps : action.payload
-                /*layoutProps : {
-                    edWidth : action.payload.edWidth,
-                    prevWidth : action.payload.prevWidth,
-                    message : action.payload.message
-                }*/
             }
         default :
             return state;
