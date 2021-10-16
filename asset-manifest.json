@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/markdown_previewer/static/css/main.7c6ef7c0.chunk.css",
+    "main.js": "/markdown_previewer/static/js/main.40e6693e.chunk.js",
+    "main.js.map": "/markdown_previewer/static/js/main.40e6693e.chunk.js.map",
+    "runtime-main.js": "/markdown_previewer/static/js/runtime-main.d3d1d8cc.js",
+    "runtime-main.js.map": "/markdown_previewer/static/js/runtime-main.d3d1d8cc.js.map",
+    "static/js/2.ee5ad5dd.chunk.js": "/markdown_previewer/static/js/2.ee5ad5dd.chunk.js",
+    "static/js/2.ee5ad5dd.chunk.js.map": "/markdown_previewer/static/js/2.ee5ad5dd.chunk.js.map",
+    "static/js/3.697b5849.chunk.js": "/markdown_previewer/static/js/3.697b5849.chunk.js",
+    "static/js/3.697b5849.chunk.js.map": "/markdown_previewer/static/js/3.697b5849.chunk.js.map",
+    "index.html": "/markdown_previewer/index.html",
+    "static/css/main.7c6ef7c0.chunk.css.map": "/markdown_previewer/static/css/main.7c6ef7c0.chunk.css.map",
+    "static/js/2.ee5ad5dd.chunk.js.LICENSE.txt": "/markdown_previewer/static/js/2.ee5ad5dd.chunk.js.LICENSE.txt",
+    "static/media/perse2.41d14e9f.png": "/markdown_previewer/static/media/perse2.41d14e9f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3d1d8cc.js",
+    "static/js/2.ee5ad5dd.chunk.js",
+    "static/css/main.7c6ef7c0.chunk.css",
+    "static/js/main.40e6693e.chunk.js"
+  ]
+}
